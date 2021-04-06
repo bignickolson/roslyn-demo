@@ -9,9 +9,19 @@ namespace RoslynDemo.Common
 {
     public static class AnalyerExtensions
     {
-        public static bool InheritsFrom(this INamedTypeSymbol symbol, INamedTypeSymbol baseType)
-        { 
-            
+        public static bool InheritsFrom(this ITypeSymbol symbol, ITypeSymbol expectedBaseType)
+        {
+            var baseType = symbol;
+            while (baseType != null)
+            {
+                if (SymbolEqualityComparer.Default.Equals(baseType, expectedBaseType))
+                {
+                    return true;
+                }
+                baseType = baseType.BaseType;
+            }
+
+            return false;
         }
     }
 }

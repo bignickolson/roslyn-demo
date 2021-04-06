@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TargetConsoleApp.Models
 {
-    class ChildEntity : BaseModel
+    class Child : BaseModel
     {
     }
 }

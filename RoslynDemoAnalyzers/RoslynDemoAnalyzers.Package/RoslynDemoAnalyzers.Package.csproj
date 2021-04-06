@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>RoslynDemoAnalyzers</PackageId>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.0.3.0</PackageVersion>
     <Authors>bigni</Authors>
     <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
     <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
@@ -23,9 +23,12 @@
     <NoPackageAnalysis>true</NoPackageAnalysis>
 
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RoslynDemo.Common\RoslynDemo.Common.csproj" />
     <ProjectReference Include="..\RoslynDemoAnalyzers.CodeFixes\RoslynDemoAnalyzers.CodeFixes.csproj" />
     <ProjectReference Include="..\RoslynDemoAnalyzers\RoslynDemoAnalyzers.csproj" />
   </ItemGroup>
@@ -38,6 +41,7 @@
     <ItemGroup>
       <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemoAnalyzers.dll" PackagePath="analyzers/dotnet/cs" />
       <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemoAnalyzers.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemo.Common.dll" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>
   </Target>
 

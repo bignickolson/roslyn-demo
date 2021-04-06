@@ -15,12 +15,12 @@ using System.Threading.Tasks;
 
 namespace RoslynDemoAnalyzers
 {
-    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(RoslynDemoAnalyzersCodeFixProvider)), Shared]
-    public class RoslynDemoAnalyzersCodeFixProvider : CodeFixProvider
+    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(ModelShouldEndWithModelCodeFixProvider)), Shared]
+    public class ModelShouldEndWithModelCodeFixProvider : CodeFixProvider
     {
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(ModelShouldEndWithModelAnalyzer.DiagnosticId); }
+            get { return ImmutableArray.Create(ModelShouldEndWithModelAnalyzer.DiagnosticID); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()
@@ -33,7 +33,6 @@ namespace RoslynDemoAnalyzers
         {
             var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
 
-            // TODO: Replace the following code with your own analysis, generating a CodeAction for each fix to suggest
             var diagnostic = context.Diagnostics.First();
             var diagnosticSpan = diagnostic.Location.SourceSpan;
 
@@ -43,17 +42,24 @@ namespace RoslynDemoAnalyzers
             // Register a code action that will invoke the fix.
             context.RegisterCodeFix(
                 CodeAction.Create(
-                    title: CodeFixResources.CodeFixTitle,
-                    createChangedSolution: c => MakeUppercaseAsync(context.Document, declaration, c),
-                    equivalenceKey: nameof(CodeFixResources.CodeFixTitle)),
+                    title: CodeFixResources.ModelShouldEndWithModelCodeFixTitle,
+                    createChangedSolution: c => AppendModel(context.Document, declaration, c),
+                    equivalenceKey: nameof(CodeFixResources.ModelShouldEndWithModelCodeFixTitle)),
                 diagnostic);
+
+            context.RegisterCodeFix(
+                CodeAction.Create(
+                    title: CodeFixResources.RemoveBaseModelTitle, 
+                    createChangedDocument: c => RemoveBaseModel(context.Document, declaration, c),
+                    equivalenceKey: nameof(CodeFixResources.RemoveBaseModelTitle)),
+                 diagnostic); 
         }
 
-        private async Task<Solution> MakeUppercaseAsync(Document document, TypeDeclarationSyntax typeDecl, CancellationToken cancellationToken)
+        private async Task<Solution> AppendModel(Document document, TypeDeclarationSyntax typeDecl, CancellationToken cancellationToken)
         {
             // Compute new uppercase name.
             var identifierToken = typeDecl.Identifier;
-            var newName = identifierToken.Text.ToUpperInvariant();
+            var newName = identifierToken.Text + "Model";
 
             // Get the symbol representing the type to be renamed.
             var semanticModel = await document.GetSemanticModelAsync(cancellationToken);
@@ -66,6 +72,15 @@ namespace RoslynDemoAnalyzers
 
             // Return the new solution with the now-uppercase type name.
             return newSolution;
+        }
+
+        private async Task<Document> RemoveBaseModel(Document document, TypeDeclarationSyntax typeDecl, CancellationToken cancellationToken)
+        {
+            var newDecl = typeDecl.RemoveNode(typeDecl.BaseList, SyntaxRemoveOptions.KeepEndOfLine);
+            var root = await document.GetSyntaxRootAsync();
+            var newRoot = root.ReplaceNode(typeDecl, newDecl);
+
+            return document.WithSyntaxRoot(newRoot);
         }
     }
 }
