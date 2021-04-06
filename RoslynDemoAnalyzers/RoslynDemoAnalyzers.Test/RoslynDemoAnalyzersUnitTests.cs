@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using VerifyCS = RoslynDemoAnalyzers.Test.CSharpCodeFixVerifier<
-    RoslynDemoAnalyzers.RoslynDemoAnalyzersAnalyzer,
+    RoslynDemoAnalyzers.ModelShouldEndWithModelAnalyzer,
     RoslynDemoAnalyzers.RoslynDemoAnalyzersCodeFixProvider>;
 
 namespace RoslynDemoAnalyzers.Test

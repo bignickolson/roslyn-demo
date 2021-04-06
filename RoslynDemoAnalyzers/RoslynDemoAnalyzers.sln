@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemoAnalyzers", "RoslynDemoAnalyzers\RoslynDemoAnalyzers.csproj", "{70BDE2F5-792B-4CAA-B7F2-50AE8F2DC9F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers", "RoslynDemoAnalyzers\RoslynDemoAnalyzers.csproj", "{70BDE2F5-792B-4CAA-B7F2-50AE8F2DC9F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemoAnalyzers.CodeFixes", "RoslynDemoAnalyzers.CodeFixes\RoslynDemoAnalyzers.CodeFixes.csproj", "{D8759E1B-56A0-4D48-AEB7-1EFA1FB2BB89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers.CodeFixes", "RoslynDemoAnalyzers.CodeFixes\RoslynDemoAnalyzers.CodeFixes.csproj", "{D8759E1B-56A0-4D48-AEB7-1EFA1FB2BB89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemoAnalyzers.Package", "RoslynDemoAnalyzers.Package\RoslynDemoAnalyzers.Package.csproj", "{50D48ADD-614D-4F4E-9903-0B4225B528DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers.Package", "RoslynDemoAnalyzers.Package\RoslynDemoAnalyzers.Package.csproj", "{50D48ADD-614D-4F4E-9903-0B4225B528DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemoAnalyzers.Test", "RoslynDemoAnalyzers.Test\RoslynDemoAnalyzers.Test.csproj", "{D3BAF29F-5F1E-4FDE-ABE8-1A055EF73751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers.Test", "RoslynDemoAnalyzers.Test\RoslynDemoAnalyzers.Test.csproj", "{D3BAF29F-5F1E-4FDE-ABE8-1A055EF73751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemoAnalyzers.Vsix", "RoslynDemoAnalyzers.Vsix\RoslynDemoAnalyzers.Vsix.csproj", "{6AB39438-F275-4BDD-9571-3D4CE240BB66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers.Vsix", "RoslynDemoAnalyzers.Vsix\RoslynDemoAnalyzers.Vsix.csproj", "{6AB39438-F275-4BDD-9571-3D4CE240BB66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemo.StandAlone", "..\RoslynDemo.StandAlone\RoslynDemo.StandAlone.csproj", "{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemo.Common", "RoslynDemo.Common\RoslynDemo.Common.csproj", "{259E9F2B-0C36-418A-B94C-DA61220826E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{6AB39438-F275-4BDD-9571-3D4CE240BB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB39438-F275-4BDD-9571-3D4CE240BB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB39438-F275-4BDD-9571-3D4CE240BB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

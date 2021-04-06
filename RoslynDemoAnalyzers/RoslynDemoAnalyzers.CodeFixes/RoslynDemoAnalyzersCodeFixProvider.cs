@@ -20,7 +20,7 @@ namespace RoslynDemoAnalyzers
     {
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(RoslynDemoAnalyzersAnalyzer.DiagnosticId); }
+            get { return ImmutableArray.Create(ModelShouldEndWithModelAnalyzer.DiagnosticId); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()
