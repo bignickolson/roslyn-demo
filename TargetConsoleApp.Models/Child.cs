@@ -14,8 +14,8 @@ namespace TargetConsoleApp.Models
         {
             var x = 0;
             x++;
-            base.DoSomething();
             "somestring".ToString();
+            base.DoSomething();
         }
 
         public Task DoSomethingAsync()

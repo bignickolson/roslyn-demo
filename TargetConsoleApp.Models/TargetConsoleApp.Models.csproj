@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.6" />
+    <None Remove=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.5" />
   </ItemGroup>
 
 </Project>
