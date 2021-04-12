@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TargetConsoleApp.Models.Attributes;
 
 namespace TargetConsoleApp.Models
 {
-    [RequiresDatabaseRecord]
-    public class Child : BaseModel
+    public class ChildModel : BaseModel
     {
         public override void DoSomething()
         {
-            var x = 0;
-            x++;
-            base.DoSomething();
-            "somestring".ToString();
-        }
+            "do some stuff".ToString();
 
-        public Task DoSomethingAsync()
+            base.DoSomething();
+
+            var thisis = "some other" + "stuff";
+        }
+    }
+
+
+    public class BaseModel
+    {
+        public virtual void DoSomething()
         {
-            return Task.Run(() => DoSomething());
+            // i do some important  stuff
         }
     }
 }

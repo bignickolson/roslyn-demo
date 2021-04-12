@@ -52,11 +52,14 @@ namespace RoslynDemoAnalyzers.Test
             {
                 TestCode = source,
                 FixedCode = fixedSource,
-                CodeActionIndex = codeActionIndex
+                CodeActionIndex = codeActionIndex,
+                
             };
 
             test.ExpectedDiagnostics.AddRange(expected);
+
             await test.RunAsync(CancellationToken.None);
         }
+
     }
 }

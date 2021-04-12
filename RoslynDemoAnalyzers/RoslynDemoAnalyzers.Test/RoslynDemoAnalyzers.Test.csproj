@@ -8,11 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="TestFiles\Async\correct.cs" />
+    <Compile Remove="TestFiles\Async\error.cs" />
+    <Compile Remove="TestFiles\Async\fixed.cs" />
+    <Compile Remove="TestFiles\BaseMethodCalled\correct.cs" />
+    <Compile Remove="TestFiles\BaseMethodCalled\error.cs" />
     <Compile Remove="TestFiles\GrandChild\code.cs" />
     <Compile Remove="TestFiles\GrandChild\fixed.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="TestFiles\Async\correct.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Async\fixed.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Async\error.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\BaseMethodCalled\correct.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\BaseMethodCalled\error.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\GrandChild\fixed.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

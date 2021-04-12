@@ -8,7 +8,7 @@ using VerifyCS = RoslynDemoAnalyzers.Test.CSharpCodeFixVerifier<
 namespace RoslynDemoAnalyzers.Test
 {
     [TestClass]
-    public class RoslynDemoAnalyzersUnitTest
+    public class ModelShouldEndWithModelTests
     {
         //No diagnostics expected to show up
         [TestMethod]
@@ -128,8 +128,5 @@ namespace RoslynDemoAnalyzers.Test
 
             await VerifyCS.VerifyCodeFixAsync(test, expected, fixtest, 1);
         }
-
     }
-
-
 }

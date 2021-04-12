@@ -61,6 +61,33 @@ namespace RoslynDemoAnalyzers {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ensures base method is called from derived classes.
+        /// </summary>
+        internal static string BaseMethodShouldBeCalledAnalyzerDescription {
+            get {
+                return ResourceManager.GetString("BaseMethodShouldBeCalledAnalyzerDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Base DoSomething() should be called.
+        /// </summary>
+        internal static string BaseMethodShouldBeCalledAnalyzerMessageFormat {
+            get {
+                return ResourceManager.GetString("BaseMethodShouldBeCalledAnalyzerMessageFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Base DoSomething() should be called.
+        /// </summary>
+        internal static string BaseMethodShouldBeCalledAnalyzerTitle {
+            get {
+                return ResourceManager.GetString("BaseMethodShouldBeCalledAnalyzerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Types inheriting from BaseModel should end with Model.
         /// </summary>
         internal static string ModelShouldEndWithModelAnalyzerDescription {

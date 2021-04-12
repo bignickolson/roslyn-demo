@@ -61,6 +61,15 @@ namespace RoslynDemoAnalyzers {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add &apos;async&apos; keyword to method declaration.
+        /// </summary>
+        internal static string AsyngMethodShouldBeAsyncTitle {
+            get {
+                return ResourceManager.GetString("AsyngMethodShouldBeAsyncTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Append &apos;Model&apos; to class name.
         /// </summary>
         internal static string ModelShouldEndWithModelCodeFixTitle {

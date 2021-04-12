@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.3" />
+    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.6" />
   </ItemGroup>
 
 </Project>
