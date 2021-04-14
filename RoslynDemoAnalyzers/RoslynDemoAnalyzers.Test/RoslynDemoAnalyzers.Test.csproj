@@ -15,6 +15,9 @@
     <Compile Remove="TestFiles\BaseMethodCalled\error.cs" />
     <Compile Remove="TestFiles\GrandChild\code.cs" />
     <Compile Remove="TestFiles\GrandChild\fixed.cs" />
+    <Compile Remove="TestFiles\OneClass\correct.cs" />
+    <Compile Remove="TestFiles\OneClass\correctNested.cs" />
+    <Compile Remove="TestFiles\OneClass\error.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +40,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="TestFiles\GrandChild\code.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OneClass\correctNested.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OneClass\correct.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\OneClass\error.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

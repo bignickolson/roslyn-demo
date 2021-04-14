@@ -9,5 +9,6 @@ namespace RoslynDemoAnalyzers
         public const string ModelShouldEndWithModel = "RoslynDemo001";
         public const string BaseMethodShouldBeCalled = "RoslynDemo002";
         public const string IsAsyncMethodAsync = "RoslynDemo003";
+        public const string OneClassPerFile= "RoslynDemo004";
     }
 }

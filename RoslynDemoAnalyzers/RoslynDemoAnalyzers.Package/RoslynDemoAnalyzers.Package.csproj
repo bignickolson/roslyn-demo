@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>RoslynDemoAnalyzers</PackageId>
-    <PackageVersion>1.0.6.0</PackageVersion>
+    <PackageVersion>1.0.7.0</PackageVersion>
     <Authors>bigni</Authors>
     <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
     <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
@@ -24,7 +24,7 @@
 
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
 
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
   </PropertyGroup>
 
   <ItemGroup>
