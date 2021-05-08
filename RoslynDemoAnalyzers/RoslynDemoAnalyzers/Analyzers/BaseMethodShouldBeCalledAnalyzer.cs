@@ -22,7 +22,9 @@ namespace RoslynDemoAnalyzers
 
         private const string Category = "Usage";
 
+#pragma warning disable RS2008 // Enable analyzer release tracking
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticID, Title, MessageFormat, Category, DiagnosticSeverity.Error, isEnabledByDefault: true, description: Description);
+#pragma warning restore RS2008 // Enable analyzer release tracking
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

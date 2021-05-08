@@ -18,11 +18,13 @@ namespace RoslynDemoAnalyzers
 
         private static readonly string Title = "Async methods should be marked with the async keyword";
         private static readonly string MessageFormat = "Method '{0}' should be marked with the async keyword";
-        private static readonly string Description = "Recommend methods named ...Async should have async keyword";
+        private static readonly string Description = "Recommend methods named ...Async should have async keyword.";
 
         private const string Category = "Usage";
 
+#pragma warning disable RS2008 // Enable analyzer release tracking
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticID, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
+#pragma warning restore RS2008 // Enable analyzer release tracking
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 

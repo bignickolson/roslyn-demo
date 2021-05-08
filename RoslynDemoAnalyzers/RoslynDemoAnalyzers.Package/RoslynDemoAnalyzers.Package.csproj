@@ -1,15 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
-
   <PropertyGroup>
     <PackageId>RoslynDemoAnalyzers</PackageId>
-    <PackageVersion>1.0.7.0</PackageVersion>
+    <PackageVersion>1.0.20.0</PackageVersion>
     <Authors>bigni</Authors>
     <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
     <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
@@ -21,28 +20,27 @@
     <Copyright>Copyright</Copyright>
     <PackageTags>RoslynDemoAnalyzers, analyzers</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
-
     <Version>1.0.7</Version>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\RoslynDemo.Common\RoslynDemo.Common.csproj" />
     <ProjectReference Include="..\RoslynDemoAnalyzers.CodeFixes\RoslynDemoAnalyzers.CodeFixes.csproj" />
     <ProjectReference Include="..\RoslynDemoAnalyzers\RoslynDemoAnalyzers.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <!-- Reference a NuGet package and use PrivateAssets="All" to prevent adding the NuGet dependency when creating the package. -->
+    <PackageReference Include="Scriban" Version="3.7.0" PrivateAssets="All" />
+  </ItemGroup>
   <ItemGroup>
     <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
   </ItemGroup>
-
   <Target Name="_AddAnalyzersToOutput">
     <ItemGroup>
       <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemoAnalyzers.dll" PackagePath="analyzers/dotnet/cs" />
       <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemoAnalyzers.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
       <TfmSpecificPackageFile Include="$(OutputPath)\RoslynDemo.Common.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\Scriban.dll" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>
   </Target>
-
 </Project>

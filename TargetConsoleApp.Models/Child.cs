@@ -7,27 +7,22 @@ using TargetConsoleApp.Models.Attributes;
 
 namespace TargetConsoleApp.Models
 { 
-    [RequiresDatabaseRecord]
-    public class Child : BaseModel
+    public class ChildModel : BaseModel
     { 
         public override void DoSomething()
         {
+
+            base.DoSomething();
             var x = 0;
             x++;
             "somestring".ToString();
-            base.DoSomething();
         }
 
-        public Task DoSomethingAsync()
-        {
-            return Task.Run(() => DoSomething());
-        }
+        //public Task DoSomethingAsync()
+        //{
+        //}
 
         public class NestedClass { }
     }
 
-    //public abstract class SomeBase
-    //{  
-    //    public abstract Task<int> GetValueAsync();
-    //}
 }

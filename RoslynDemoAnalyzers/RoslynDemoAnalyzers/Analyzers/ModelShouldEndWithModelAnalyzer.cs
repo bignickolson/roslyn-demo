@@ -22,7 +22,9 @@ namespace RoslynDemoAnalyzers
         private static readonly LocalizableString Description = new LocalizableResourceString(nameof(Resources.ModelShouldEndWithModelAnalyzerDescription), Resources.ResourceManager, typeof(Resources));
         private const string Category = "Naming";
 
+#pragma warning disable RS2008 // Enable analyzer release tracking
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticIDs.ModelShouldEndWithModel, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
+#pragma warning restore RS2008 // Enable analyzer release tracking
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
@@ -31,8 +33,6 @@ namespace RoslynDemoAnalyzers
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
             context.EnableConcurrentExecution();
 
-            // TODO: Consider registering other actions that act on syntax instead of or in addition to symbols
-            // See https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Actions%20Semantics.md for more information
             context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
         }
 

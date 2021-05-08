@@ -15,7 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemoAnalyzers.Vsix", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemo.StandAlone", "..\RoslynDemo.StandAlone\RoslynDemo.StandAlone.csproj", "{0AE4EB35-791D-42FA-8F6F-DCC1C0F7506F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynDemo.Common", "RoslynDemo.Common\RoslynDemo.Common.csproj", "{259E9F2B-0C36-418A-B94C-DA61220826E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoslynDemo.Common", "RoslynDemo.Common\RoslynDemo.Common.csproj", "{259E9F2B-0C36-418A-B94C-DA61220826E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TargetProject", "TargetProject\TargetProject.csproj", "{11B30F9D-5837-4460-8F3A-1C48EA05C9A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DE2053B-9B5B-4A1D-A607-60CFCFF24F67}"
+	ProjectSection(SolutionItems) = preProject
+		updatePackage.ps1 = updatePackage.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +58,10 @@ Global
 		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{259E9F2B-0C36-418A-B94C-DA61220826E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B30F9D-5837-4460-8F3A-1C48EA05C9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B30F9D-5837-4460-8F3A-1C48EA05C9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B30F9D-5837-4460-8F3A-1C48EA05C9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B30F9D-5837-4460-8F3A-1C48EA05C9A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -38,7 +38,7 @@ namespace RoslynDemo.StandAlone
                 // Print message for WorkspaceFailed event to help diagnosing project load failures.
                 workspace.WorkspaceFailed += (o, e) => Console.WriteLine(e.Diagnostic.Message);
 
-                var solutionPath = @"C:\git\roslyn-demo\TargetConsoleApp\TargetConsoleApp.sln";
+                var solutionPath = @"C:\projects\roslyn-demo\TargetConsoleApp\TargetConsoleApp.sln";
                 Console.WriteLine($"Loading solution '{solutionPath}'");
 
                 // Attach progress reporter so we print projects as they are loaded.

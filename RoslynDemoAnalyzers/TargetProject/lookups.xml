@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LookupTables>
+  <LookupTable name="PersonStatus">
+    <LookupValue name="Active" value="1"></LookupValue>
+    <LookupValue name="Disabled" value="2"></LookupValue>
+    <LookupValue name="Terminated" value="3"></LookupValue>
+  </LookupTable>
+  <LookupTable name="AddressType">
+    <LookupValue name="Home" value="1"></LookupValue>
+    <LookupValue name="Work" value="2"></LookupValue>
+    <LookupValue name="This Or That" value="2"></LookupValue>
+  </LookupTable>
+</LookupTables>

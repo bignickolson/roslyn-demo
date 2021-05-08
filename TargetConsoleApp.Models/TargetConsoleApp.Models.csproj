@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.6" />
+    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.7" />
   </ItemGroup>
 
 </Project>

@@ -61,7 +61,7 @@ namespace RoslynDemoAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ensures base method is called from derived classes.
+        ///   Looks up a localized string similar to Ensures base method is called from derived classes..
         /// </summary>
         internal static string BaseMethodShouldBeCalledAnalyzerDescription {
             get {
@@ -88,7 +88,7 @@ namespace RoslynDemoAnalyzers {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Types inheriting from BaseModel should end with Model.
+        ///   Looks up a localized string similar to Types inheriting from BaseModel should end with Model..
         /// </summary>
         internal static string ModelShouldEndWithModelAnalyzerDescription {
             get {

@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace {{ ProjectDefaultNamespace }}.Enums
+{
+	{{ for table in LookupTables }}
+	public enum {{ table.Name }}
+	{
+		{{ for val in table.Values }}
+		{{ val.Name }}  = {{ val.Value }},{{ end }}
+	}
+	
+	{{ end }}
+}
