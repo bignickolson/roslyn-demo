@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.19" />
+    <PackageReference Include="RoslynDemoAnalyzers" Version="1.0.20" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="lookups.xml" />

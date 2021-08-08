@@ -8,6 +8,6 @@
   <LookupTable name="AddressType">
     <LookupValue name="Home" value="1"></LookupValue>
     <LookupValue name="Work" value="2"></LookupValue>
-    <LookupValue name="This Or That" value="2"></LookupValue>
+    <LookupValue name="1This Or That" value="2"></LookupValue>
   </LookupTable>
 </LookupTables>

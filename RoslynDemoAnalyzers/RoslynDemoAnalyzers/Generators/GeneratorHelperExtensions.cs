@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace RoslynDemoAnalyzers.Generators
 {
@@ -14,12 +16,14 @@ namespace RoslynDemoAnalyzers.Generators
         {
             if (string.IsNullOrEmpty(s)) throw new ArgumentNullException(nameof(s));
 
+            var regex = new Regex("[^0-9a-zA-Z_]");
+            s = regex.Replace(s, "");
             if (char.IsDigit(s[0]))
             {
                 s = "_" + s;
             }
 
-            return s.Replace(" ", "");        
+            return new string(regex.Replace(s, "").Skip(0).Take(512).ToArray());
         }
 
         public static bool IsNumeric(this string s)
